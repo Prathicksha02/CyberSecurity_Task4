@@ -87,7 +87,7 @@ sudo ufw status numbered
 
 ## Screenshots:
 
-Screenshots is included here: Screenshots_task4.pdf
+Screenshot is included here: Screenshots_task4.pdf
 
 ---
 
