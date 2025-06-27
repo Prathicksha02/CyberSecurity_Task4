@@ -48,16 +48,28 @@ sudo ufw status numbered
 
 ---
 
-### 5️⃣ Test the Rule using Telnet:
+### 5️⃣ Allow SSH (Port 22)
+
+* SSH (port 22) was already allowed by default in Kali Linux after enabling UFW.
+* Verified using:
+  
+sudo ufw status numbered
+
+* Ensures remote access via SSH remains functional.
+
+---
+
+### 6️⃣ Test the Rule using Telnet:
 
 telnet localhost 23
 
 * **Expected Result:**
+
   `Connection refused` confirms that the firewall is blocking port 23 successfully.
 
 ---
 
-### 6️⃣ Remove the Block Rule (Restore Original State):
+### 7️⃣ Remove the Block Rule (Restore Original State):
 
 sudo ufw delete deny 23
 
@@ -65,7 +77,7 @@ sudo ufw delete deny 23
 
 ---
 
-### 7️⃣ Final Verification:
+### 8️⃣ Final Verification:
 
 sudo ufw status numbered
 
@@ -74,7 +86,8 @@ sudo ufw status numbered
 ---
 
 ## Screenshots:
- Screenshot included here: Screenshots_task4.pdf
+
+Screenshots is included here: Screenshots_task4.pdf
 
 ---
 
@@ -82,7 +95,7 @@ sudo ufw status numbered
 
 * Successfully blocked inbound traffic on port 23 using UFW.
 * Verified blocking using Telnet test.
-* Allowed SSH (port 22) remains enabled.
+* SSH (port 22) remained allowed by default.
 * Removed test rule to restore default firewall settings.
 
 ---
@@ -95,4 +108,3 @@ A firewall acts as a security barrier that filters network traffic based on defi
 * Helps prevent unauthorized access to system services and enhances overall security.
 
 ---
-
